@@ -1,3 +1,4 @@
+#las listas son datos mutables
 tareas = ["despertar",True, 3, 3.1416, "J" ,"Hacer huevos"]
 print("Antes de append")
 print(tareas)
@@ -24,3 +25,35 @@ print("el elemento menor es " , min(numbers))
 
 del(numbers[0]) #Borra el primer elemento de la lista
 print(numbers)
+
+#las modificaciones siempre apuntan al mismo espacio de memoria
+
+memory_space =[0,1,2,3,4,5]
+Second_list = memory_space # la nueva lista apunta a la primera
+
+print(memory_space)
+print(Second_list)
+
+del Second_list[0] #esto elimina de las dos listas el elemento 0
+
+print(memory_space)
+print(Second_list)
+
+# El id en memoria es el mismo es decir el mismo espacio de memoria
+
+print(id(memory_space))
+print(id(Second_list))
+
+#al cortar con slice nos dirigimos a otra posicion de memoria
+
+third_list = memory_space[0:]
+
+print(id(memory_space))
+print(id(Second_list))
+print(id(third_list))
+
+# ]aun auque tenga el mismo contenido
+
+print(memory_space)
+print(Second_list)
+print(third_list)
