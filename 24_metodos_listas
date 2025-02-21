@@ -1,0 +1,26 @@
+tareas = ["despertar",True, 3, 3.1416, "J" ,"Hacer huevos"]
+print("Antes de append")
+print(tareas)
+
+
+#agregar elemento array (APPEND)
+tareas.append(False)
+print("Luego de append")
+print(tareas) # se añade al final
+
+#añadir en una posicion especifica de la lista (INSERT)
+tareas.insert(2, 333)
+print(tareas) # se añade en la posicion 2 de la lista 0, 1, 2
+
+#consultar posicion del elemento dentro de la lista (INDEX)
+print(tareas.index("J")) # retorna la primera aparicion
+
+# consultar el elemento mayor dentro de una lista (MAX, MIN)
+numbers = [1,2,56,3,78.2,100]
+print("el elemento mayor es " , max(numbers))
+print("el elemento menor es " , min(numbers))
+
+# Borrar un elemento de la lista (DEL)
+
+del(numbers[0]) #Borra el primer elemento de la lista
+print(numbers)
