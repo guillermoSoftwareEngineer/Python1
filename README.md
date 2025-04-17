@@ -1,2 +1,2 @@
 # Python1
-Ejercicios de python para practicar
+Ejercicios de python para practicargit
