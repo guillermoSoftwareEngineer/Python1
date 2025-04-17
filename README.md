@@ -1,2 +1,2 @@
 # Python1
-Phyton1
+Ejercicios de python para practicar
