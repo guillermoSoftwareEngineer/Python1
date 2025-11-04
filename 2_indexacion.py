@@ -57,7 +57,7 @@ print(frase[2])
 # Imprime la última letra usando un índice negativo (sin usar len).
 
 s = "programa"
- print(s[-1])
+print(s[-1])
 
 # Ejercicio 6
 # Imprime "uva" usando indexación de listas.
@@ -65,7 +65,7 @@ s = "programa"
 
 lista = ["manzana", "pera", "uva", "kiwi"]
 
-print[lista[2]]
+print(lista[2])
 
 # Ejercicio 7
 
@@ -92,7 +92,7 @@ print(texto2[10])
 
 pal = "secreto"
 
-print(pal[-1])
+print(pal[-2])
 
 # Ejercicio 10
 # Dado:
