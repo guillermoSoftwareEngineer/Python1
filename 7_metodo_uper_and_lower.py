@@ -3,82 +3,94 @@
 # upper retorna los caracteres en mayuscula
 # upper retorna los caracteres en minuscula
 
-# Ejercicio 1:
-# Dado el string "python", usa el método upper() para convertirlo a mayúsculas.
-
-cadena = 'python'
-print(cadena.upper())
 
 
-# Ejercicio 2:
-# Dado el string "PYTHON", usa el método lower() para convertirlo a minúsculas.
+# EJERCICIOS DE upper() y lower()
 
-string2 = 'PYTHON'
-print(string2.lower())
+# Ejercicio 1
+# Crea una variable con tu nombre en minúsculas
+# Imprímelo en MAYÚSCULAS usando upper()
 
-# Ejercicio 3:
-# Asigna a una variable el valor "PyThOn" y muestra el resultado de aplicar upper() y lower() 
-# en dos líneas separadas.
-
-string3 = 'PyThOn'
-print(string3.upper)
-print(string3.lower) 
-
-# Por que  retorna ?
-# <built-in method upper of str object at 0x000002878D02BA20>
-# <built-in method lower of str object at 0x000002878D02BA20>
-
-# Ejercicio 4:
-# Guarda en una variable el texto "Hola Mundo" y muestra el texto en mayúsculas.
-
-saludo = 'Hola Mundo'
-print(saludo.upper())
-
-# Ejercicio 5:
-# Guarda en una variable el texto "Hola Mundo" y muestra el texto en minúsculas.
+vari= "guillermo"
+print(vari.upper())
 
 
-saludo2 = 'Hola Mundo'
-print(saludo2.lower())
+# Ejercicio 2
+# Guarda la palabra "PYTHON" en una variable
+# Imprímela en minúsculas usando lower()
 
-# Ejercicio 6:
-# Usa una variable para almacenar tu nombre en minúsculas y muestra tu nombre en mayúsculas.
+Lenguaje= "PYTHON"
+print(Lenguaje.lower())
 
-nombre = 'guillermo'
-print(nombre.upper())
 
-# Ejercicio 7:
-# Crea una variable con el texto "Aprender Python" y muestra primero el texto en mayúsculas y 
-# luego en minúsculas.
 
-aprender ='Aprender Python'
-print(aprender.upper())
-print(aprender.lower())
+# Ejercicio 3
+# Crea una cadena mezclada: "PyThOn"
+# Imprime:
+# a) la versión en mayúsculas
+# b) la versión en minúsculas
 
-# Ejercicio 8:
-# Asigna a una variable el valor "Bienvenido" y muestra el resultado de upper() 
-# seguido de un espacio y luego el resultado de lower().
+pyt ="PyThOn"
+print(pyt.upper())
+print(pyt.lower())
 
-valor = 'Bienvenido'
-valor_may = valor.upper()
-valor_min = valor.lower()
+# Ejercicio 4
+# Guarda una frase con espacios: "Aprender Python es util"
+# Imprímela completamente en MAYÚSCULAS
 
-print(valor_may + ' ' + valor_min)
+frase_apr = "Aprender Python es util"
+print(frase_apr.upper())
 
-# Ejercicio 9:
-# Define una variable con el valor "PrAcTiCa" y muestra la comparación de si
-#  el texto es igual a su versión en mayúsculas.
 
-var1 = 'PrAcTiCa'
-var2 = var1.upper()
+# Ejercicio 5
+# Guarda tu nombre en MAYÚSCULAS
+# Imprime cuántos caracteres tiene usando len()
 
-print( var1 == var2 )
+name = "GUILLERMO"
+print(len(name))
 
-# Ejercicio 10:
-# Define una variable con el valor "Ejercicio" y verifica si al aplicar lower() el resultado
-# es igual al texto original (recuerda que debe coincidir carácter por carácter).
 
-varejer = 'Ejercicio'
-varejer_low = varejer.lower()
+# Ejercicio 6
+# Crea una variable con "HoLa MuNdO"
+# Convierte todo a minúsculas y luego imprime el resultado
 
-print(varejer == varejer_low)
+Hola_m = "HoLa MuNdO"
+print(Hola_m.lower())
+
+
+# Ejercicio 7
+# Guarda la palabra "python"
+# Convierte a MAYÚSCULAS y muestra la longitud del resultado
+Len_pro = "python"
+resultado= Len_pro.upper()
+print(len(resultado))
+
+
+# Ejercicio 8
+# Crea una cadena con números y letras: "PyThOn123"
+# Convierte todo a minúsculas y muéstralo
+pyt_numb = "PyThOn123"
+print(pyt_numb.lower())
+
+# Ejercicio 9
+# Guarda una palabra cualquiera
+# Imprime:
+# - la palabra original
+# - la palabra en upper()
+# - la palabra en lower()
+
+original = "Hablé mas duro, que tengo una toalla"
+print(original)
+print(original.upper())
+print(original.lower())
+
+
+# Ejercicio 10
+# Crea una cadena "Error"
+# Convierte a MAYÚSCULAS
+# Usa len() para mostrar cuántos caracteres tiene
+
+csd_err = "Error"
+csd_err_may = csd_err.upper()
+print(csd_err_may)
+print(len(csd_err_may))
