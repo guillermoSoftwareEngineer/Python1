@@ -91,33 +91,103 @@ logs = "INFO | 2026-01-11 | System Started\nERROR | 2026-01-12 | Disk Failure"
 # Separa por "|".
 # Imprime SOLO la fecha de las líneas cuyo nivel sea "ERROR".
 
-for lines in logs.split("|"):
-    print(lines.strip())
+
+for linea in logs.split("\n"):
+    campos = linea.split("|")
+    print("campos es " + str(campos))# para entender mejor el ejercicio
+
+    nivel = campos[0].strip()
+    fecha = campos[1].strip()
+
+    if nivel == "ERROR":
+        print(fecha)
 
 
-# EJERCICIO 7
+print("*"*25) # por que estoy confundiendo cada ejercicio al ejecutar en la terminal para revisar
+    
+ # EJERCICIO 7
 ventas = "Laptop;1200\nMouse;25\nKeyboard;0\nMonitor;300"
-# Cada línea es producto;precio
+
+# REGLAS ESPECÍFICAS:
+# - Cada línea tiene exactamente: producto;precio
+# - El precio se evalúa como TEXTO, no como número
+# - No convertir tipos
+# - No eliminar líneas
+# OBJETIVO:
 # Recorre cada línea.
-# Imprime SOLO el nombre de los productos cuyo precio sea mayor a 0.
-# (Comparación como texto, no numérica).
+# Imprime SOLO el nombre del producto
+# cuyo precio NO sea exactamente "0".
+
+for linea in ventas.split("\n"):
+    # print(linea)
+    campos = linea.split(";")
+
+    producto = campos[0]
+    valor = campos[1]
+
+    if valor != "0":
+        print(producto)
+
+
+   
+   
+print("*"*25) # por que estoy confundiendo cada ejercicio al ejecutar en la terminal para revisar
+
 
 
 # EJERCICIO 8
 registros = "OK|user1\nOK|user2\nFAIL|user3\nOK|user4"
-# Recorre cada línea.
-# Imprime SOLO los usuarios cuyo estado sea "OK".
 
+# REGLAS ESPECÍFICAS:
+# - Cada línea tiene exactamente: estado|usuario
+# - No transformar el estado para evaluarlo
+# OBJETIVO:
+# Recorre cada línea.
+# Imprime SOLO el nombre del usuario
+# cuyo estado sea exactamente "OK".
+
+for index in registros.split("\n"):
+    estado = index.split("|")[0]
+    usuario = index.split("|")[1]
+    if estado == "OK":
+        print(usuario)
+
+print("*"*25) # por que estoy confundiendo cada ejercicio al ejecutar en la terminal para revisar
 
 # EJERCICIO 9
 paths = "/home/user/docs\n/var/log/system\n/etc/nginx/conf"
+
+# REGLAS ESPECÍFICAS:
+# - Cada línea es una ruta
+# - Puede comenzar con "/"
+# - No usar slicing
+# - No asumir cantidad fija de niveles
+# OBJETIVO:
 # Recorre cada ruta.
-# Elimina el "/" inicial si existe.
+# Elimina el "/" inicial SOLO si existe.
 # Separa por "/".
 # Imprime SOLO el último elemento de cada ruta.
 
+for ruta in paths.split("\n"):
+    ruta = ruta.split("/")[-1]
+    print(ruta)
+   
 
-# EJERCICIO 10 (conceptual, sin código)
+
+   
+  print("*"*25) # por que estoy confundiendo cada ejercicio al ejecutar en la terminal para revisar  
+
+
+
+# EJERCICIO 10 (CONCEPTUAL — sin código)
 # Explica con tus palabras:
-# por qué estos ejercicios representan mejor el trabajo real
-# de un analista de datos junior que solo usar split() aislado.
+# por qué en este bloque:
+# - se trabaja con registros completos
+# - se accede a campos específicos
+# - se decide qué imprimir
+# y por qué esto representa mejor el trabajo real
+# de un analista de datos junior que usar split() de forma aislada.
+
+# por que es evidente que esto se acerca mas a la manipulacion de datos, por ejemplo, ya seria facil acceder a filas y columnas
+# o a objetos que tienen los datos ordenados, listos para manipulacion, tambien como se pueden manejar celdas vacias o nulas
+# seleccionar elementos debe acercarse mas a lo fundamental en cuanto a datos
